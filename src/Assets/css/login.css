@@ -1,0 +1,12 @@
+.login {
+  height: 100vh;
+}
+
+.form-head {
+  background-color: var(--secondary);
+  color: #fff;
+}
+
+.form-section {
+  box-shadow: 0 0 10px var(--secondary);
+}

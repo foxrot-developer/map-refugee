@@ -1,0 +1,16 @@
+import React from 'react';
+
+import RegistrationTabs from '../Components/RegistrationTabs';
+
+const Registration = () => {
+
+
+
+    return (
+        <div className='container login text-center'>
+            <RegistrationTabs />
+        </div>
+    )
+}
+
+export default Registration;

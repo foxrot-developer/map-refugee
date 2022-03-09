@@ -1,0 +1,42 @@
+.header-link {
+  color: var(--primary);
+}
+
+.header-link {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.navbar-light .navbar-toggler {
+  background-color: #fff;
+  border-color: var(--primary);
+}
+
+.navbar-container {
+  border-top: 1px solid var(--border);
+}
+
+.navbar-collapse.collapse {
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar > .container {
+  justify-content: center !important;
+  padding-top: 20px;
+}
+
+.school-logo {
+  width: 250px;
+  max-width: 250px !important;
+}
+
+.header-link:hover {
+  color: var(--secondary);
+}
+
+@media screen and (max-width: 576px) {
+  .logo {
+    text-align: center !important;
+  }
+}

@@ -2,11 +2,17 @@ import React, { useState } from 'react';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import { Multiselect } from "multiselect-react-dropdown";
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 import TextField from '../Shared/TextField';
 import logo from '../Assets/images/logo.png';
+import { host_signup } from '../Store/storeIndex';
 
 const HostRegistration = () => {
+
+    const history = useNavigate();
+    const dispatch = useDispatch();
 
     const [speakingLanguages, setSpeakingLanguages] = useState('');
 
@@ -38,7 +44,7 @@ const HostRegistration = () => {
 
     const hostRegistrationHandler = (data) => {
         data.languages = speakingLanguages;
-        console.log({ data });
+        dispatch(host_signup(data, history));
     }
 
     const options = [
@@ -79,7 +85,7 @@ const HostRegistration = () => {
                                 <Form>
                                     <TextField label='Name' name='fullName' type='text' />
                                     <TextField label='Phone' name='phone' type='tel' placeholder='E.g +143265555' />
-                                    <TextField label='People in your home' name='people' type='number' />
+                                    <TextField label='People in your home' name='people' type='text' />
                                     <TextField label='Email' name='email' type='email' />
                                     <TextField label='Street address' name='address' type='text' />
                                     <TextField label='City' name='city' type='text' />
@@ -92,7 +98,7 @@ const HostRegistration = () => {
                                         <Field type='radio' name='family' value='no' className='me-2' />
                                         No
                                     </label>
-                                    <TextField label='How many rooms do you have available?' name='rooms' type='number' />
+                                    <TextField label='How many rooms do you have available?' name='rooms' type='text' />
                                     <label htmlFor='country'>Country</label>
                                     <Field as="select" name="country" className='mt-2 mb-3 w-100 py-2'>
                                         <option value="Poland">Poland</option>

@@ -1,12 +1,18 @@
 import React from 'react';
 import * as Yup from 'yup';
 import { Formik, Form } from 'formik';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 import TextField from '../Shared/TextField';
 import '../Assets/css/login.css';
 import logo from '../Assets/images/logo.png';
+import { host_login } from '../Store/storeIndex';
 
 const HostLogin = () => {
+
+    const dispatch = useDispatch();
+    const history = useNavigate();
 
     const validValues = {
         email: '',
@@ -19,7 +25,7 @@ const HostLogin = () => {
     });
 
     const loginHandler = (data) => {
-        console.log({ data });
+        dispatch(host_login(data, history));
     }
 
     return (

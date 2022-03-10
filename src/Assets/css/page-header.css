@@ -1,0 +1,8 @@
+.page-header-section {
+  background-color: var(--primary);
+  color: #fff;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

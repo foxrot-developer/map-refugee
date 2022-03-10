@@ -2,11 +2,17 @@ import React, { useState } from 'react';
 import { Formik, Form, Field } from 'formik';
 import { Multiselect } from "multiselect-react-dropdown";
 import * as Yup from 'yup';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 import TextField from '../Shared/TextField';
 import logo from '../Assets/images/logo.png';
+import { refugee_signup } from '../Store/storeIndex';
 
 function RefugeeRegistration() {
+
+    const history = useNavigate();
+    const dispatch = useDispatch();
 
     const [speakingLanguages, setSpeakingLanguages] = useState('');
 
@@ -42,7 +48,7 @@ function RefugeeRegistration() {
 
     const refugeeRegistrationHandler = (data) => {
         data.languages = speakingLanguages;
-        console.log({ data });
+        dispatch(refugee_signup(data, history));
     }
 
     const options = [

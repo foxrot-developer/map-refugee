@@ -1,0 +1,8 @@
+.footer-section {
+  background-color: var(--primary);
+}
+
+.footer-section p {
+  color: #fff;
+  align-self: center;
+}

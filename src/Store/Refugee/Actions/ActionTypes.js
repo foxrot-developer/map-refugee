@@ -1,0 +1,3 @@
+export const REFUGEE_LOGIN = 'REFUGEE_LOGIN';
+export const REFUGEE_SIGNUP = 'REFUGEE_SIGNUP';
+export const REFUGEE_LOGOUT = 'REFUGEE_LOGOUT';

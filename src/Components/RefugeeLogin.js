@@ -1,12 +1,18 @@
 import React from 'react';
 import * as Yup from 'yup';
 import { Formik, Form } from 'formik';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 import TextField from '../Shared/TextField';
 import '../Assets/css/login.css';
 import logo from '../Assets/images/logo.png';
+import { refugee_login } from '../Store/storeIndex';
 
 const RefugeeLogin = () => {
+
+    const dispatch = useDispatch();
+    const history = useNavigate();
 
     const validValues = {
         email: '',
@@ -19,7 +25,7 @@ const RefugeeLogin = () => {
     });
 
     const loginHandler = (data) => {
-        console.log({ data });
+        dispatch(refugee_login(data, history));
     }
 
     return (

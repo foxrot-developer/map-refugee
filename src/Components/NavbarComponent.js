@@ -25,10 +25,10 @@ const NavbarComponent = () => {
                                         <React.Fragment>
                                             <NavLink to='/' className='header-link' style={{ margin: '10px', textDecoration: 'none' }}>Home</NavLink>
                                             <NavLink to='/about' className='header-link ml-5' style={{ margin: '10px', textDecoration: 'none' }}>About</NavLink>
-                                            <NavLink to='/syllabus' className='header-link ml-5' style={{ margin: '10px', textDecoration: 'none' }}>Syllabus</NavLink>
-                                            <NavLink to='/programs' className='header-link ml-5' style={{ margin: '10px', textDecoration: 'none' }}>Programs</NavLink>
-                                            <NavLink to='/gallery' className='header-link ml-5' style={{ margin: '10px', textDecoration: 'none' }}>Gallery</NavLink>
+                                            <NavLink to='/donation' className='header-link ml-5' style={{ margin: '10px', textDecoration: 'none' }}>Donation</NavLink>
                                             <NavLink to='/contact' className='header-link ml-5' style={{ margin: '10px', textDecoration: 'none' }}>Contact</NavLink>
+                                            <NavLink to='/login' className='header-link ml-5' style={{ margin: '10px', textDecoration: 'none' }}>Login</NavLink>
+                                            <NavLink to='/registration' className='header-link ml-5' style={{ margin: '10px', textDecoration: 'none' }}>Registration</NavLink>
                                         </React.Fragment>
                                     </Nav>
                                 </Navbar.Collapse>

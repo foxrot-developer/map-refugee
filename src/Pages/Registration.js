@@ -7,7 +7,7 @@ const Registration = () => {
 
 
     return (
-        <div className='container login text-center'>
+        <div className='container register text-center'>
             <RegistrationTabs />
         </div>
     )
